@@ -1,5 +1,7 @@
-* {
-    /*  */
+@font-face {
+    font-family: 'MyWebFont';
+    src: url('dahot.Pokemon Solid.ttf'); /* IE9 Compat Modes */
+
 }
 .card {
     width: 12rem;
@@ -103,8 +105,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #pokéTitle {
-    /* font-family: 'pokemon-solid-normal', sans-serif !important; */
-    font-family: 'Pokemon Solid', sans-serif !important;
+    font-family: 'MyWebFont', sans-serif !important;
     font-size: 3rem;
     text-align: center;
     position: relative;
