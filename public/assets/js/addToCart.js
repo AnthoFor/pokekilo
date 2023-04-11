@@ -61,11 +61,11 @@ calculOfTotalPrice = () => {
 //======================== EVENT LISTENER ================================
 window.addEventListener('click', (e) => {
     //Ajouter au panier
-    if (e.path[1].classList.contains('cartAdd')){
-        let pokeId = e.path[0].nearestViewportElement.dataset.pokeid;
-        let pokeName = e.path[0].nearestViewportElement.dataset.pokename;
-        let pokeImg = e.path[0].nearestViewportElement.dataset.pokeico;
-        let pokeUnitPrice = e.path[0].nearestViewportElement.dataset.pokeprice;
+    if (e.target.parentElement.classList.contains('cartAdd')){
+        let pokeId = e.target.nearestViewportElement.dataset.pokeid;
+        let pokeName = e.target.nearestViewportElement.dataset.pokename;
+        let pokeImg = e.target.nearestViewportElement.dataset.pokeico;
+        let pokeUnitPrice = e.target.nearestViewportElement.dataset.pokeprice;
         addToCart(pokeId, pokeName, pokeUnitPrice, pokeImg);
         playLevelUp();
     }
@@ -138,11 +138,11 @@ removeOnePokeTotaly = (pokename) => {
 // Au chargement de la page, si le local storage n'est pas vide
 // alors il alimente le cartArray et le panier sinon, bah il se passe rien quoi.
 if (localStorage.length > 0) {
-    console.log('local storage pas vide, ducoup copie du LS dans le Array')
+    // console.log('local storage pas vide, ducoup copie du LS dans le Array')
     addToArray();
     pushToCartModal();
     calculOfTotalPrice();
-} else {console.log('local storage vide')}
+}
 
 //vidange total du panier
 let deleteFullCartBtn = document.getElementById('clearCartBtn');
