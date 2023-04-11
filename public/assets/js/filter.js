@@ -89,7 +89,7 @@ window.addEventListener('click', (e)  => {
                 filteredResults.splice(index, 1)
             }
         }
-        e.path[1].remove();
+        e.target.parentElement.remove();
         printPokeCard();
     }
 })
